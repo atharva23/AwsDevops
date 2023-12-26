@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo "Installing dependencies or any setup needed before build"
+
+  pre_build:
+    commands:
+      - echo "Executing pre-build steps, if any"
+
+  build:
+    commands:
+      - echo "Executing build steps here"
+      # Add your build commands here
+
+  post_build:
+    commands:
+      - echo "Executing post-build steps, like tests or deployment"
+
+artifacts:
+  files:
+    - '**/*'  # Define the files to be included in the artifact
