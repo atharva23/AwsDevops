@@ -1,25 +1,11 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 14
-    commands:
-      - echo "Installing dependencies or any setup needed before build"
-
-  pre_build:
-    commands:
-      - echo "Executing pre-build steps, if any"
-
   build:
     commands:
-      - echo "Executing build steps here"
-      # Add your build commands here
-
-  post_build:
-    commands:
-      - echo "Executing post-build steps, like tests or deployment"
+      - echo "Hello, this is a simple AWS CodePipeline build."
+      - echo "This buildspec.yml file executes commands to print statements."
+      - echo "You can replace these commands with your build actions."
 
 artifacts:
-  files:
-    - '**/*'  # Define the files to be included in the artifact
+  files: []  # No artifacts are generated in this simple example
